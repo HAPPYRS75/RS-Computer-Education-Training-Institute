@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <script src="https://kit.fontawesome.com/4594bd2bf0.js" crossorigin="anonymous"></script>
+    <link rel="icon"
+        href="https://github.com/HAPPYRS75/images/blob/main/RS%20Computer%20Education%20Training%20Institute%20Logo%20PNG%202.png?raw=true">
+    <link rel="stylesheet" href="Registration-Form.css">
+
+</head>
+
+<body>
+    <!-- -----------------top contact section-------------------- -->
+    <section class="top-section">
+        <div class="top-container">
+            <div class="top-contact">
+                <ul class="top-contact-left">
+                    <li><a href="tel:+917269964557"><i class="fas fa-phone-volume mr-2"></i> +917269964557</a></li>
+                    <li><a href="mailto:sudhirpatel2082001@gmail.com"><i class="far fa-envelope mr-2"></i>
+                            sudhirpatel2082001@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="top-login">
+                <ul class="top-login-right">
+                    <li><a href="../Admin-Login/Admin.html"><i class="fas fa-key mr-2"></i>Admin Login</a></li>
+                    <li><a href="../Student-Login/Student-Login.html"><i class="fas fa-user mr-2"></i>Student Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------------------------------------------logo and banner section---------------------------------------- -->
+
+    <section class="banner-section">
+        <div class="banner-container">
+            <img src="https://github.com/HAPPYRS75/images/blob/main/logo.png?raw=true" alt="Logo" class="logo">
+        </div>
+    </section>
+
+    <!-- ----------------------------------------------menu bar section----------------------------------------------- -->
+
+    <section class="menu-section">
+        <div class="menu-container">
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul class="menu-list" id="menuList">
+                <li><a href="../Home/RS-Institute-Home-Page.html"> <i class="fas fa-home mr-2"></i> Home</a></li>
+                <li><a href="../About/About.html">About</a></li>
+                <li class="dropdown-menu"><a href="../Home/RS-Institute-Home-Page.html#course">Courses</a>
+                    <!-- <ul>
+                        <li class="dropright-menu"><a href="#">Diploma <i class="fas fa-angle-right ml-2"></i></a>
+                            <ul>
+                                <li><a href="#">ADCA</a></li>
+                                <li><a href="#">DCA</a></li>
+                                <li><a href="#">DFA</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropright-menu"><a href="#">Programming <i class="fas fa-angle-right ml-2"></i></a>
+                            <ul>
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">JAVASCRIPT</a></li>
+                                <li><a href="#">REACT JS</a></li>
+                                <li><a href="#">CORE JAVA</a></li>
+                                <li><a href="#">ADVANCE JAVA</a></li>
+                                <li><a href="#">PYTHON</a></li>
+                                <li><a href="#">C</a></li>
+                                <li><a href="#">C++</a></li>
+                                <li><a href="#">SQL</a></li>
+                                <li><a href="#">PHP</a></li>
+                            </ul>
+                        </li>
+                    </ul> -->
+                </li>
+                <li class="dropdown-menu"><a href="#">Student Zone <i class="fas fa-angle-down ml-2"></i> </a>
+                    <ul>
+                        <li><a href="../Student-Login/Student-Login.html">Student Login</a></li>
+                        <li><a href="../Registration-Form/Registration-Form.html">Apply Online</a></li>
+                        <li><a href="../Certificate-Verification/Certificate-Verification.html">Certificate
+                                Verification</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-menu"><a href="#">Gallery <i class="fas fa-angle-down ml-2"></i> </a>
+                    <ul>
+                        <li><a href="../Photo-Gallery/Photo-Gallery.html">Photo Gallery</a></li>
+                        <li><a href="../Video-Gallery/Video-Gallery.html">Video Gallery</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Cantact/Contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ----------------------------------------------admission form section---------------------------------------- -->
+    <section class="regist-frm">
+        <div class="form-container floating">
+            <div class="form-header">
+                <h1>Admission Form</h1>
+                <p>Fill in your details carefully</p>
+            </div>
+
+            <form id="admissionForm" class="form-body">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" class="form-control" placeholder="Your Full Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="male" name="gender" value="Male" required>
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="female" name="gender" value="Female">
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="other" name="gender" value="Other">
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aadhar">Aadhar Number</label>
+                        <input type="text" id="aadhar" class="form-control" pattern="[0-9]{12}"
+                            placeholder="Your Aadhar Number" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fatherName">Father's Name</label>
+                        <input type="text" id="fatherName" class="form-control" placeholder="Your Father Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motherName">Mother's Name</label>
+                        <input type="text" id="motherName" class="form-control" placeholder="Your Mother Name" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="course">Course Applied For</label>
+                        <select id="course" class="form-control" required>
+                            <option value="">Select Course</option>
+                            <option value="CS101">Computer Science (CS101)</option>
+                            <option value="EE202">Electrical Engineering (EE202)</option>
+                            <option value="ME303">Mechanical Engineering (ME303)</option>
+                            <option value="BT404">Biotechnology (BT404)</option>
+                            <option value="BA505">Business Administration (BA505)</option>
+                            <option value="AR606">Architecture (AR606)</option>
+                            <option value="PH707">Physics (PH707)</option>
+                            <option value="CH808">Chemistry (CH808)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="qualification">Highest Qualification</label>
+                        <select id="qualification" class="form-control" required>
+                            <option value="">Select Qualification</option>
+                            <option value="10th">10th Standard</option>
+                            <option value="12th">12th Standard</option>
+                            <option value="Graduation">Graduation</option>
+                            <option value="Post Graduation">Post Graduation</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="religion">Religion</label>
+                        <select id="religion" class="form-control" required>
+                            <option value="">Select Religion</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Muslim">Muslim</option>
+                            <option value="Christian">Christian</option>
+                            <option value="Sikh">Sikh</option>
+                            <option value="Buddhist">Buddhist</option>
+                            <option value="Jain">Jain</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" class="form-control" required>
+                            <option value="">Select Category</option>
+                            <option value="General">General</option>
+                            <option value="OBC">OBC</option>
+                            <option value="SC">SC</option>
+                            <option value="ST">ST</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" class="form-control" required>
+                            <option value="">Select Country</option>
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                            <option value="UK">UK</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" id="state" class="form-control" placeholder="Your State" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" class="form-control" placeholder="Your City" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pincode">Pincode</label>
+                        <input type="text" id="pincode" class="form-control" placeholder="Your Pincode" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" pattern="[0-9]{10}"
+                            placeholder="Your Phone Number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Your Email Address" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Full Address</label>
+                    <textarea id="address" class="form-control" rows="3" placeholder="Your Full Address"
+                        required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Photo Upload [jpg/jpeg/png]</label>
+                        <div class="file-upload">
+                            <input type="file" id="photo" accept=".jpg,.jpeg,.png" required>
+                            <label for="photo"><i class="fas fa-camera"></i> Choose Photo</label>
+                            <div class="file-name" id="photo-name">No file chosen</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Aadhar Document [PDF/jpg/jpeg/png]</label>
+                        <div class="file-upload">
+                            <input type="file" id="aadharDoc" accept=".pdf,.jpg,.jpeg,.png" required>
+                            <label for="aadharDoc"><i class="fas fa-id-card"></i> Choose Aadhar</label>
+                            <div class="file-name" id="aadharDoc-name">No file chosen</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Qualification Documents [PDF/jpg/jpeg/png]</label>
+                        <div class="file-upload">
+                            <input type="file" id="documents" accept=".pdf,.jpg,.jpeg,.png" multiple required>
+                            <label for="documents"><i class="fas fa-file-upload"></i> Choose Files</label>
+                            <div class="file-name" id="documents-name">No files chosen</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <button type="button" class="btn btn-reset" id="resetBtn">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                    <button type="button" class="btn btn-preview" id="previewBtn">
+                        <i class="fas fa-eye"></i> Preview
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Preview Modal -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Review Your Admission Form</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="preview-section">
+                    <h3>Personal Information</h3>
+                    <div class="preview-grid">
+                        <div class="preview-item">
+                            <div class="preview-label">Full Name</div>
+                            <div class="preview-value" id="preview-fullName"></div>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-label">Gender</div>
+                            <div class="preview-value" id="preview-gender"></div>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-label">Date of Birth</div>
+                            <div class="preview-value" id="preview-dob"></div>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-label">Aadhar Number</div>
+                            <div class="preview-value" id="preview-aadhar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-section">
+                    <h3>Parents Information</h3>
+                    <div class="preview-grid">
+                        <div class="preview-item">
+                            <div class="preview-label">Father's Name</div>
+                            <div class="preview-value" id="preview-fatherName"></div>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-label">Mother's Name</div>
+                            <div class="preview-value" id="preview-motherName"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-section">
+                    <h3>Educational Information</h3>
+                    <div class="preview-grid">
+                        <div class="preview-item">
+                            <div class="preview-label">Course Applied For</div>
+                            <div class="preview-value" id="preview-course"></div>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-label">Highest Qualification</div>
+                            <div class="preview-value" id="preview-qualification"></div>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-label">Religion</div>
+                            <div class="preview-value" id="preview-religion"></div>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-label">Category</div>
+                            <div class="preview-value" id="preview-category"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-section">
+                    <h3>Contact Information</h3>
+                    <div class="preview-grid">
+                        <div class="preview-item">
+                            <div class="preview-label">Country</div>
+                            <div class="preview-value" id="preview-country"></div>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-label">State</div>
+                            <div class="preview-value" id="preview-state"></div>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-label">City</div>
+                            <div class="preview-value" id="preview-city"></div>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-label">Pincode</div>
+                            <div class="preview-value" id="preview-pincode"></div>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-label">Phone Number</div>
+                            <div class="preview-value" id="preview-phone"></div>
+                        </div>
+                        <div class="preview-item">
+                            <div class="preview-label">Email</div>
+                            <div class="preview-value" id="preview-email"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-section">
+                    <h3>Address</h3>
+                    <div class="preview-item">
+                        <div class="preview-value" id="preview-address"></div>
+                    </div>
+                </div>
+
+                <div class="preview-section">
+                    <h3>Uploaded Files</h3>
+
+                    <div class="file-preview">
+                        <h4>Photo</h4>
+                        <img id="photoPreview" class="photo-preview" alt="Photo preview">
+                        <div class="file-name" id="preview-photo-name"></div>
+                    </div>
+
+                    <div class="file-preview">
+                        <h4>Aadhar Document</h4>
+                        <div id="aadharDocPreview"></div>
+                    </div>
+
+                    <div class="file-preview">
+                        <h4>Qualification Documents</h4>
+                        <div id="documentsPreview"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-edit" id="editBtn">
+                    <i class="fas fa-edit"></i> Edit
+                </button>
+                <button type="button" class="btn btn-submit" id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> Submit
+                    <div class="spinner" id="submitSpinner"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------footer section---------------------------------------------------- -->
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>We are a leading computer education institute providing quality training in various IT fields. Our
+                    mission is to empower students with practical skills for the digital world.</p>
+                <div class="footer-social">
+                    <a href="https://wa.me/917269964557?text=Hi." target="_blank"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.Instagram.com/rs72.69" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@happyrs1520" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../Home/RS-Institute-Home-Page.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="../About/About.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="../Home/RS-Institute-Home-Page.html#course"><i class="fas fa-chevron-right"></i>
+                            Courses</a></li>
+                    <li><a href="../Cantact/Contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- <div class="footer-column">
+                <h3>Courses</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> All Courses</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Diploma Courses</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Programming</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Web Development</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Graphic Design</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Office Automation</a></li>
+                </ul>
+            </div> -->
+
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="footer-contact-info">
+                    <li><a href="https://maps.app.goo.gl/Sf7UkyhTSZxaZXDf7" target="_blank"><i
+                                class="fas fa-map-marker-alt"></i>
+
+                            <span>Village- Kallipur, Post- Mirzamurad, District- Varanasi,
+                                U.P. 221302</span></a>
+                    </li>
+                    <li><a href="tel:+917269964557"><i class="fa-solid fa-phone-volume"></i>
+
+                            <span>+91 7269964557</span></a>
+                    </li>
+                    <li><a href="mailto:sudhirpatel2082001@gmail.com"><i class="fa-regular fa-envelope"></i>
+
+                            <span>sudhirpatel2082001@gmail.com</span></a>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Monday - Saturday: 9:00 AM - 6:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-container">
+                <p>&copy; 2023 Computer Education Institute. All Rights Reserved. | Designed by Sudhir Patel</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Registration-Form.js"></script>
+</body>
+
+</html>
